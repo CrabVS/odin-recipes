@@ -7,7 +7,7 @@ const addListeners = function addLinkListeners(links) {
   links.forEach((link, index) => {
     link.addEventListener('click', () => {
       if (index === 0) initiateHome();
-      if (index === 4) initiateAddRecipe();
+      else if (index === 4) initiateAddRecipe();
       else initiateRecipes(link.textContent);
     });
   });
