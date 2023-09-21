@@ -1,5 +1,3 @@
-// recipe = name, imgSrc, imgAlt, description, ingredients, steps
-
 const addSteps = function addSteps(steps) {
   const stepsEl = document.querySelector('.content .recipe-ingredients');
 
