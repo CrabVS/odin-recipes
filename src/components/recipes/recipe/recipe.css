@@ -1,0 +1,7 @@
+.recipe ul,
+.recipe ol,
+.recipe p,
+.recipe img {
+    padding: 10px 6px;
+    margin-bottom: 24px;
+}

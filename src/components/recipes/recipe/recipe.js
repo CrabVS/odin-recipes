@@ -1,3 +1,5 @@
+import './recipe.css';
+
 const addSteps = function addSteps(steps) {
   const stepsEl = document.querySelector('.content .recipe-ingredients');
 
@@ -22,20 +24,22 @@ const buildPage = function buildPage(recipe) {
   const page = document.querySelector('main .content');
 
   page.innerHTML = `
-    <h1>${recipe.name}</h1>
-    <img src="${recipe.imgSrc}" alt="${recipe.imgAlt}" width="300px">
-    <!-- Credit: ${recipe.imgSrc} -->
-  
-    <h2>Description</h2>
-    <p>${recipe.description}</p>
-  
-    <h2>Ingredients</h2>
-    <ul class="recipe-ingredients">
-    </ul>
-  
-    <h2>Steps</h2>
-    <ol class="recipe-steps">
-    </ol>`;
+    <div class="recipe">
+      <h1>${recipe.name}</h1>
+      <img src="${recipe.imgSrc}" alt="${recipe.imgAlt}" width="300px">
+      <!-- Credit: ${recipe.imgSrc} -->
+    
+      <h2>Description</h2>
+      <p>${recipe.description}</p>
+    
+      <h2>Ingredients</h2>
+      <ul class="recipe-ingredients">
+      </ul>
+    
+      <h2>Steps</h2>
+      <ol class="recipe-steps">
+      </ol>
+    </div>`;
 
   addIngredients(recipe.ingredients);
   addSteps(recipe.steps);
