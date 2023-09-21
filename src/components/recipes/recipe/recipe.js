@@ -1,7 +1,7 @@
 import './recipe.css';
 
 const addSteps = function addSteps(steps) {
-  const stepsEl = document.querySelector('.content .recipe-ingredients');
+  const stepsEl = document.querySelector('.content .recipe-steps');
 
   steps.forEach((step) => {
     const newListEl = document.createElement('li');
@@ -11,7 +11,7 @@ const addSteps = function addSteps(steps) {
 };
 
 const addIngredients = function addIngredients(ingredients) {
-  const ingredientsEl = document.querySelector('.content .recipe-steps');
+  const ingredientsEl = document.querySelector('.content .recipe-ingredients');
 
   ingredients.forEach((ingredient) => {
     const newListEl = document.createElement('li');

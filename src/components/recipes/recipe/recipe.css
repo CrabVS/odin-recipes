@@ -5,3 +5,16 @@
     padding: 10px 6px;
     margin-bottom: 24px;
 }
+
+.recipe ul {
+    list-style-type: disc;
+}
+
+.recipe ol {
+    list-style-type: decimal;
+}
+
+.recipe ul li,
+.recipe ol li {
+    padding: 4px 0;
+}
