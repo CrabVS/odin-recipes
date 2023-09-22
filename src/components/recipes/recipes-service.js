@@ -77,10 +77,16 @@ const mockData = [
   },
 ];
 
-const fetchData = async function fetchData(id) {
+const fetchRecipes = function fetchRecipes() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(mockData[id]), 1000);
+    setTimeout(() => resolve(mockData), 300);
   });
 };
 
-export default fetchData;
+const fetchRecipeData = function fetchRecipeData(id) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(mockData[id]), 300);
+  });
+};
+
+export { fetchRecipeData, fetchRecipes };
