@@ -92,4 +92,9 @@ const fetchRecipeData = function fetchRecipeData(id) {
   });
 };
 
-export { fetchRecipeData, fetchRecipes };
+const voteRecipe = function voteRecipe(id) {
+  const data = (mockData.find((obj) => obj.id === id));
+  data.votes += 1;
+};
+
+export { fetchRecipeData, fetchRecipes, voteRecipe };

@@ -1,3 +1,7 @@
+.recipe {
+    margin-bottom: 20px;
+}
+
 .recipe ul,
 .recipe ol,
 .recipe p,
@@ -17,4 +21,14 @@
 .recipe ul li,
 .recipe ol li {
     padding: 4px 0;
+}
+
+.recipe .btn {
+    padding: 10px;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.recipe .btn:active {
+    transform: scale(0.98);
 }

@@ -1,4 +1,5 @@
 import './recipe.css';
+import { voteRecipe } from '../recipes-service';
 
 const addSteps = function addSteps(steps) {
   const stepsEl = document.querySelector('.content .recipe-steps');
@@ -39,10 +40,17 @@ const buildPage = function buildPage(recipe) {
       <h2>Steps</h2>
       <ol class="recipe-steps">
       </ol>
+      <button class="btn">Vote Recipe</button>
     </div>`;
 
   addIngredients(recipe.ingredients);
   addSteps(recipe.steps);
+
+  const voteBtn = page.querySelector('.recipe .btn');
+  voteBtn.addEventListener('click', () => {
+    voteRecipe(recipe.id);
+    voteBtn.disabled = true;
+  });
 };
 
 const initiateRecipe = function initiateRecipe(recipe) {

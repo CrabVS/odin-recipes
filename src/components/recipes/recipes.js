@@ -1,4 +1,5 @@
 import './recipes.css';
+import './loading-spinner.css';
 import initiateRecipe from './recipe/recipe';
 import { fetchRecipes, fetchRecipeData } from './recipes-service';
 
@@ -53,9 +54,9 @@ const buildPage = async function buildPage() {
     votesDisplay.appendChild(newVotes);
 
     newRecipeEl.addEventListener('click', async () => {
-      contentRecipes.innerHTML = ``;
+      contentRecipes.innerHTML = `<div class="lds-ring"><div></div><div></div><div></div><div>`;
+      contentRecipes.classList.add('loading');
       const recipeData = await fetchRecipeData(recipe.id);
-      console.log(recipe.id);
       initiateRecipe(recipeData);
     });
   });
