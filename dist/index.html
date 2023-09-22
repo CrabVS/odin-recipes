@@ -19,6 +19,51 @@
         </nav>
     </header>
     <main>
+        <h1 class="add-recipe-title">Add New Recipe</h1>
+        <form>
+            <fieldset>
+                <legend>Recipe Data</legend>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="img-src">Image Source</label>
+                    <input type="text" id="img-src" name="img-src" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Ingredients</legend>
+                <ul class="ingredients-display"></ul>
+                <div class="form-group">
+                    <label for="ingredients">Ingredient</label>
+                    <div>
+                        <input type="text" id="ingredients" name="ingredients">
+                        <button class="btn" type="button">Add</button>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Steps</legend>
+                <ul class="steps-display"></ul>
+                <div class="form-group">
+                    <label for="steps">Step</label>
+                    <div>
+                        <input type="text" id="steps" name="steps">
+                        <button class="btn" type="button">Add</button>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="button-group">
+                <button class="btn" type="submit">Add Recipe</button>
+                <button class="btn" type="button">Clear Ingredients</button>
+                <button class="btn" type="button">Clear Steps</button>
+            </div>
+        </form>
     </main>
 
     <script src="./main.js"></script>

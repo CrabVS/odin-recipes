@@ -29,3 +29,11 @@ main {
     margin: 0 auto;
     padding: 0 40px;
 }
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}

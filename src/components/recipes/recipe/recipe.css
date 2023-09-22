@@ -26,9 +26,4 @@
 .recipe .btn {
     padding: 10px;
     min-width: 120px;
-    cursor: pointer;
-}
-
-.recipe .btn:active {
-    transform: scale(0.98);
 }
