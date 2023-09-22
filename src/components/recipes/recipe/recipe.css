@@ -4,8 +4,7 @@
 
 .recipe ul,
 .recipe ol,
-.recipe p,
-.recipe img {
+.recipe p {
     padding: 10px 6px;
     margin-bottom: 24px;
 }
@@ -26,4 +25,10 @@
 .recipe .btn {
     padding: 10px;
     min-width: 120px;
+}
+
+.recipe img {
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    margin: 20px;
 }

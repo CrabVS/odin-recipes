@@ -1,6 +1,14 @@
 import './recipe.css';
 import { voteRecipe } from '../recipes-service';
 
+const removeHeaderActive = function removeHeaderActive() {
+  const links = Array.from(document.querySelectorAll('header nav ul li a'));
+
+  links.forEach((link) => {
+    link.classList.remove('active');
+  });
+};
+
 const addSteps = function addSteps(steps) {
   const stepsEl = document.querySelector('.content .recipe-steps');
 
@@ -56,6 +64,7 @@ const buildPage = function buildPage(recipe) {
 };
 
 const initiateRecipe = function initiateRecipe(recipe) {
+  removeHeaderActive();
   buildPage(recipe);
 };
 

@@ -3,12 +3,17 @@ import initiateRecipes from '../recipes/recipes';
 import initiateAddRecipe from '../add-recipe/add-recipe';
 
 const addListeners = function addListeners() {
+  const links = Array.from(document.querySelectorAll('header nav ul li a'));
   const buttons = Array.from(document.querySelectorAll('.btn'));
   buttons[0].addEventListener('click', () => {
+    links[0].classList.remove('active');
+    links[2].classList.add('active');
     initiateRecipes('Trending');
   });
 
   buttons[1].addEventListener('click', () => {
+    links[0].classList.remove('active');
+    links[4].classList.add('active');
     initiateAddRecipe();
   });
 };

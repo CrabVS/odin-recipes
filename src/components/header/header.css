@@ -1,4 +1,9 @@
 header {
+    background-color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+#header-container {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -9,6 +14,7 @@ header {
 header .logo {
     font-size: 1.2rem;
     font-weight: bold;
+    color: var(--secondary-color);
 }
 
 nav ul {
@@ -22,4 +28,9 @@ nav ul li {
 nav ul li a {
     cursor: pointer;
     padding: 0 20px;
+    color: var(--secondary-color);
+}
+
+header .active {
+    color: var(--accent-color);
 }
