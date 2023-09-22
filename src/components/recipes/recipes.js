@@ -24,14 +24,34 @@ const buildPage = async function buildPage() {
 
   const recipes = await getRecipes();
   recipes.forEach((recipe) => {
-    const newDiv = document.createElement('a');
-    newDiv.classList.add('recipe-item');
-    contentRecipes.appendChild(newDiv);
+    const newRecipeEl = document.createElement('a');
+    newRecipeEl.classList.add('recipe-item');
+    contentRecipes.appendChild(newRecipeEl);
 
-    newDiv.addEventListener('click', async () => {
+    newRecipeEl.innerHTML = `
+    <div class="info-display"></div>
+    <div class="votes-display"></div>`;
+
+    const infoDisplay = newRecipeEl.querySelector('.info-display');
+    const votesDisplay = newRecipeEl.querySelector('.votes-display');
+
+    const newImg = document.createElement('img');
+    const newTitle = document.createElement('h4');
+    const newVotes = document.createElement('div');
+
+    newImg.src = recipe.imgSrc;
+    newImg.alt = recipe.imgAlt;
+    newTitle.textContent = recipe.name;
+    newVotes.textContent = recipe.votes;
+
+    infoDisplay.appendChild(newImg);
+    infoDisplay.appendChild(newTitle);
+    votesDisplay.appendChild(newVotes);
+
+    newRecipeEl.addEventListener('click', async () => {
       contentRecipes.innerHTML = ``;
       const recipeData = await fetchRecipeData(recipe.id);
-      console.log(recipeData);
+      console.log(recipe.id);
       initiateRecipe(recipeData);
     });
   });

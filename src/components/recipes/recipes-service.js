@@ -79,13 +79,16 @@ const mockData = [
 
 const fetchRecipes = function fetchRecipes() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(mockData), 300);
+    setTimeout(() => resolve(mockData.slice()), 300);
   });
 };
 
 const fetchRecipeData = function fetchRecipeData(id) {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(mockData[id]), 300);
+    setTimeout(() => {
+      const data = (mockData.find((obj) => obj.id === id));
+      resolve(data);
+    }, 300);
   });
 };
 

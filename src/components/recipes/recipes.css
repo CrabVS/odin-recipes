@@ -7,10 +7,33 @@
 }
 
 .recipes .recipe-item {
-    width: 100%;
+    width: 80%;
     height: 80px;
     border: 1px solid black;
-    margin: 16px 0;
+    margin: 16px auto;
     display: inline-block;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.recipe-item .info-display {
+    display: flex;
+}
+
+.recipe-item .info-display img {
+    min-width: 120px;
+}
+
+.recipe-item .info-display h4 {
+    align-self: center;
+    margin-left: 20px;
+}
+
+.recipe-item .votes-display {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    padding-right: 10px;
 }
