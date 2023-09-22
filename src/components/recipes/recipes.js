@@ -9,6 +9,10 @@ const getRecipes = async function getRecipes() {
   let sortedArray;
   if (currentType === 'Popular') {
     sortedArray = recipes.sort(({ votes: a }, { votes: b }) => b - a);
+  } else if (currentType === 'Trending') {
+    sortedArray = recipes;
+  } else {
+    sortedArray = recipes.reverse();
   }
   return sortedArray;
 };
