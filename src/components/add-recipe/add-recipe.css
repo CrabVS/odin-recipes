@@ -42,3 +42,12 @@ fieldset legend {
 form .btn {
     padding: 6px;
 }
+
+fieldset ul {
+    margin-bottom: 12px;
+    list-style-type: decimal;
+}
+
+fieldset ul li {
+    margin: 4px 0;
+}

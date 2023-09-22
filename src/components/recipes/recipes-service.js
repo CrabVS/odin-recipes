@@ -97,4 +97,11 @@ const voteRecipe = function voteRecipe(id) {
   data.votes += 1;
 };
 
-export { fetchRecipeData, fetchRecipes, voteRecipe };
+const addNewRecipe = function addNewRecipe(recipe) {
+  mockData.push(recipe);
+  console.log(mockData);
+};
+
+export {
+  fetchRecipeData, fetchRecipes, voteRecipe, addNewRecipe,
+};

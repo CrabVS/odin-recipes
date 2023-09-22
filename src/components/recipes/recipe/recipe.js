@@ -22,6 +22,8 @@ const addIngredients = function addIngredients(ingredients) {
 };
 
 const buildPage = function buildPage(recipe) {
+  const main = document.querySelector('main');
+  main.innerHTML = `<div class="content"></div>`;
   const page = document.querySelector('main .content');
 
   page.innerHTML = `
